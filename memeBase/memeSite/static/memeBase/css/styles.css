@@ -1,0 +1,51 @@
+html, body {
+    font-family:'Arial';
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.topnav {
+    background-color: #FFAD00FF;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+/* Change the color of links on hover
+.topnav a.active:hover {
+    color: white;
+}
+*/
+
+/* Add a color to the active/current link*/
+
+.topnav a.active {
+    color: black;
+    float: left;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 1 – Изменим стили шрифтов */
+/* 2 – Удалим margin в Firefox и Safari */
+input[type="text"] {
+    font-family: inherit; /* 1 */
+    font-size: inherit; /* 1 */
+    line-height: inherit; /* 1 */
+    margin: 0; /* 2 */
+}
+
+
