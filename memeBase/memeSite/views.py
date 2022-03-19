@@ -3,7 +3,24 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'memeSite/index.html')
+    data = {
+        'title': 'Главная страница'
+    }
+    return render(request, 'memeSite/index.html', data)
+
+
+def guide(request):
+    data = {
+        'title': 'Помощь'
+    }
+    return render(request, 'memeSite/guide.html', data)
+
+
+def authorization(request):
+    data = {
+        'title': 'Вход'
+    }
+    return render(request, 'memeSite/authorization.html', data)
 
 
 def pageNotFound(request, exception):

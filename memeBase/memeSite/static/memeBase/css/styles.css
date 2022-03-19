@@ -1,51 +1,59 @@
-html, body {
-    font-family:'Arial';
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-}
-
+/* Add a black background color to the top navigation */
 .topnav {
-    background-color: #FFAD00FF;
+    background-color: #ffae00;
     overflow: hidden;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
     float: right;
-    color: black;
+    color: #000000;
     text-align: center;
-    padding: 10px 20px;
+    padding: 14px 16px;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 17px;
 }
 
-/* Change the color of links on hover
-.topnav a.active:hover {
-    color: white;
-}
-*/
-
-/* Add a color to the active/current link*/
-
-.topnav a.active {
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
     color: black;
+    transform: scale(1.1);
+    transition: transform .3s ease;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    font-weight: bold;
     float: left;
+    color: black;
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
+main .help {
+    float: left;
+    color: #fff
+    margin-top: 120px;
+    text-align: left;
+    width: 100%;
+}
+main .help h2 {max-width: 800px; margin: 60px 40px}
+main .help p {max-width: 1400px; margin: 40px 40px; font-size: 30px}
+
+
+
+main .reg {
+    float: left;
+    margin-left: 20%;
+    width: 30%;
 }
 
-/* 1 – Изменим стили шрифтов */
-/* 2 – Удалим margin в Firefox и Safari */
-input[type="text"] {
-    font-family: inherit; /* 1 */
-    font-size: inherit; /* 1 */
-    line-height: inherit; /* 1 */
-    margin: 0; /* 2 */
+main .aut {
+    float: right;
+
+
+    width: 30%;
 }
+
+
 
 

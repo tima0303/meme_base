@@ -1,0 +1,26 @@
+{% extends 'memeSite/base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<form class="reg">
+    <fieldset>
+        <legend>Регистрация</legend>
+        <p>Логин: <input name="login"></p>
+        <p>Пароль: <input type="password" name="pass"></p>
+        <p>Почта: <input name="email"></p>
+        <p><input type="submit" value="Зарегистрироваться"></p>
+
+    </fieldset>
+</form>
+
+<form class="aut">
+    <fieldset>
+        <legend>Авторизация</legend>
+        <p>Логин: <input name="login"></p>
+        <p>Пароль: <input type="password" name="pass"></p>
+        <p><input type="submit" value="Войти"></p>
+    </fieldset>
+</form>
+{% endblock %}
