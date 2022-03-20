@@ -4,12 +4,16 @@
 
 {% block content %}
 <div class="features">
-    <h1>Мемы</h1>
+    {% if meme %}
     {% for el in meme %}
-        <div class="alert alert-warning">
-            <h3>{{ el.title }}</h3>
-            <p>{{ el.content }}</p>
-        </div>
+    <div class="alert alert-warning">
+        <h3>{{ el.title }}</h3>
+        <p>{{ el.content }}</p>
+        <img src="{{ el.photo.url }}">
+    </div>
     {% endfor %}
+    {% else %}
+    <p>Где мемы?!</p>
+    {% endif %}
 </div>
 {% endblock %}
