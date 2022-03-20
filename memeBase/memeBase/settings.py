@@ -97,7 +97,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR / "memeSite/static",
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

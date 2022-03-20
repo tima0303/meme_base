@@ -49,11 +49,26 @@ main .reg {
 
 main .aut {
     float: right;
-
-
     width: 30%;
 }
 
+main .features {
+    float: center;
+    color: #fff;
+    margin-top: 10px;
+    text-align: center;
+    width: 75%;
+}
 
+main .features h1 {font-size: 50px;}
+main .features p {max-width: 400px; margin: 20px auto}
+
+.alert warning {
+    float: left;
+    clear: both;
+    width: 400px;
+    margin: 20px 34%;
+    text-align: left;
+}
 
 

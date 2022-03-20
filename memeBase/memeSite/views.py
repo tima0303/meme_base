@@ -1,12 +1,12 @@
 from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render
+from .models import Meme
 
 
 def index(request):
-    data = {
-        'title': 'Главная страница'
-    }
-    return render(request, 'memeSite/index.html', data)
+    meme = Meme.objects.all()
+
+    return render(request, 'memeSite/index.html', {'meme': meme})
 
 
 def guide(request):

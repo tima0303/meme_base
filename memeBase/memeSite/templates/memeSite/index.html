@@ -1,7 +1,15 @@
 {% extends 'memeSite/base.html' %}
 
-{% block title %}{{ title }}{% endblock %}
+{% block title %}Главная страница{% endblock %}
 
 {% block content %}
-
+<div class="features">
+    <h1>Мемы</h1>
+    {% for el in meme %}
+        <div class="alert alert-warning">
+            <h3>{{ el.title }}</h3>
+            <p>{{ el.content }}</p>
+        </div>
+    {% endfor %}
+</div>
 {% endblock %}
