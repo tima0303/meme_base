@@ -27,6 +27,17 @@ def personal(request):
     :param request:
     """
     data = {
-        'title': 'Личный кабинет'
+        'title': 'Мой профиль',
     }
     return render(request, 'accounts/personal.html', data)
+
+
+def settings(request):
+    """
+    Фун-я перенаправляющая в личный кабинет пользователя
+    :param request:
+    """
+    data = {
+        'title': 'Настройки профиля'
+    }
+    return render(request, 'accounts/settings.html', data)
