@@ -1,0 +1,8 @@
+{% extends 'memeSite/base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<p>Hi {{ user.username }}!</p>
+<p><a href="{% url 'logout' %}">Выйти</a></p>
+{% endblock %}

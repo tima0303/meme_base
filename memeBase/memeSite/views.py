@@ -23,17 +23,6 @@ def guide(request):
     return render(request, 'memeSite/guide.html', data)
 
 
-def user_authorization(request):
-    """
-    Фун-я перенаправляющая на страницу пользователя
-    :param request:
-    """
-    data = {
-        'title': 'Авторизация'
-    }
-    return render(request, 'memeSite/user_authorization.html', data)
-
-
 def pageNotFound(request, exception):
     """
     Обработчик неверно заданного адреса
