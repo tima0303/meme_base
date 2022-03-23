@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'memeSite.apps.MemesiteConfig',
+    'accounts.apps.MemeusersConfig',
 ]
 
 MIDDLEWARE = [
@@ -94,11 +95,12 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-
 STATICFILES_DIRS = [
     BASE_DIR / "memeSite/static",
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+LOGIN_REDIRECT_URL = 'user_authorization'
+LOGOUT_REDIRECT_URL = 'home'

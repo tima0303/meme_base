@@ -23,15 +23,15 @@ def guide(request):
     return render(request, 'memeSite/guide.html', data)
 
 
-def authorization(request):
+def user_authorization(request):
     """
-    Фун-я перенаправляющая на страницу входа
+    Фун-я перенаправляющая на страницу пользователя
     :param request:
     """
     data = {
-        'title': 'Вход'
+        'title': 'Авторизация'
     }
-    return render(request, 'memeSite/authorization.html', data)
+    return render(request, 'memeSite/user_authorization.html', data)
 
 
 def pageNotFound(request, exception):

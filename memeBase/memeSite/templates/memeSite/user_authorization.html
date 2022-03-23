@@ -1,0 +1,16 @@
+{% extends 'memeSite/base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+        <p>Hi {{ user.username }}!</p>
+        <p><a href="{% url 'logout' %}">Выйти</a></p>
+      {% else %}
+        <p>Вы не вошли</p>
+        <a href="{% url 'login' %}">Войти</a>
+        <br><br/>
+        <p>Если у вас нет аккаунта, зарегистрируетесь!</p>
+        <a href="{% url 'signup' %}">Зарегистрироваться</a>
+      {% endif %}
+{% endblock %}

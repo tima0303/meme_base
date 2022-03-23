@@ -7,7 +7,9 @@ from memeSite.views import *
 
 urlpatterns = [
                   path('admin/', admin.site.urls),
-                  path('', include('memeSite.urls'))
+                  path('', include('memeSite.urls')),
+                  path('accounts/', include('django.contrib.auth.urls')),
+                  path('accounts/', include('accounts.urls')),
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
