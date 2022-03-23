@@ -10,6 +10,7 @@ urlpatterns = [
                   path('', include('memeSite.urls')),
                   path('accounts/', include('django.contrib.auth.urls')),
                   path('accounts/', include('accounts.urls')),
+                  path('meme/', include('meme.urls')),
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
