@@ -1,6 +1,7 @@
 from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render
-from .models import Meme
+
+from meme.models import Meme
 
 
 def index(request):
