@@ -41,36 +41,16 @@ main .help p {max-width: 1400px; margin: 40px 40px; font-size: 30px}
 
 
 
-main .reg {
-    float: left;
-    margin-left: 20%;
-    width: 30%;
-}
-
-main .aut {
-    float: right;
-    width: 30%;
-}
-
 main .features {
     float: center;
     color: #000;
     margin-top: 10px;
     text-align: center;
-    width: 40%;
+    width: 20%;
+
 }
 
-
-main .features p {max-width: 400px; margin: 20px auto}
-main .features img {max-height: 400px;}
-
-.alert warning {
-    float: left;
-    clear: both;
-    width: 400px;
-    margin: 20px 34%;
-    text-align: left;
-}
+main .features img {max-height: 300px;}
 
 main .create form {
     margin-left: 35%;
@@ -81,5 +61,14 @@ main .create form {
 main .create button {
     margin-top: 50px;
 }
+
+main .details_view {
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 30em
+}
+
+main .details_view img {max-height: 500px; max-width: 500px;}
 
 

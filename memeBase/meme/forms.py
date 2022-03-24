@@ -1,6 +1,6 @@
 from .models import Meme
 
-from django.forms import ModelForm, TextInput, DateTimeInput, Textarea, ImageField
+from django.forms import ModelForm, TextInput, Textarea
 
 
 class MemeForm(ModelForm):

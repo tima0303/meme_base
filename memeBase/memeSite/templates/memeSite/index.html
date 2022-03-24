@@ -6,11 +6,7 @@
 <div class="features">
     {% if meme %}
     {% for el in meme %}
-    <div class="alert alert-warning">
-        <h3>{{ el.title }}</h3>
-        <p>{{ el.content }}</p>
-        <img src="{{ el.photo.url }}">
-    </div>
+        <a href="{% url 'meme-detail' el.id %}"><img class="img-thumbnail" src="{{ el.photo.url }}" alt="Thumbnail image"></a>
     {% endfor %}
     {% else %}
     <p>Где мемы?!</p>

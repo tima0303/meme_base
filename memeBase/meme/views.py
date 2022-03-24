@@ -2,6 +2,16 @@ from django.shortcuts import render, redirect
 
 from meme.forms import MemeForm
 
+from django.views.generic import DetailView
+
+from meme.models import Meme
+
+
+class MemeDetailView(DetailView):
+    model = Meme
+    template_name = 'meme/details_view.html'
+    context_object_name = 'meme'
+
 
 def manage(request):
     """

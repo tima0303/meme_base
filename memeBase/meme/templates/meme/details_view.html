@@ -1,0 +1,12 @@
+{% extends 'memeSite/base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="details_view">
+  <h1>{{ meme.title }}</h1>
+  <p>{{meme.content }}</p>
+  <img src="{{ meme.photo.url }}">
+  <p>{{meme.time_create }}</p>
+</div>
+{% endblock %}
