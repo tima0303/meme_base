@@ -63,12 +63,23 @@ main .features {
 
 main .features p {max-width: 400px; margin: 20px auto}
 main .features img {max-height: 400px;}
+
 .alert warning {
     float: left;
     clear: both;
     width: 400px;
     margin: 20px 34%;
     text-align: left;
+}
+
+main .create form {
+    margin-left: 35%;
+    width: 500px;
+    margin-top: 50px;
+}
+
+main .create button {
+    margin-top: 50px;
 }
 
 

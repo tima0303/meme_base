@@ -3,10 +3,13 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-    <div class="features">
+    <div class="create">
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
-            {{ form.as_p }}
+
+            {{ form.title }}<br>
+            {{ form.content }}<br>
+            {{ form.photo }}<br>
 
             <span>{{ error }}</span>
 
