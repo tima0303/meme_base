@@ -6,7 +6,8 @@
 <div class="features">
     {% if meme %}
     {% for el in meme %}
-        <a href="{% url 'meme-detail' el.id %}"><img class="img-thumbnail" src="{{ el.photo.url }}" alt="Thumbnail image"></a>
+    <a href="{% url 'meme-detail' el.id %}"><img class="img-thumbnail" src="{{ el.photo.url }}"
+                                                 alt="Thumbnail image"></a>
     {% endfor %}
     {% else %}
     <p>Где мемы?!</p>

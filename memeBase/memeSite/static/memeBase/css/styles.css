@@ -1,10 +1,10 @@
-/* Add a black background color to the top navigation */
+/* Стили для верхней панели */
 .topnav {
     background-color: #ffae00;
     overflow: hidden;
 }
 
-/* Style the links inside the navigation bar */
+
 .topnav a {
     float: right;
     color: #000000;
@@ -14,7 +14,7 @@
     font-size: 17px;
 }
 
-/* Change the color of links on hover */
+
 .topnav a:hover {
     background-color: #ddd;
     color: black;
@@ -22,13 +22,14 @@
     transition: transform .3s ease;
 }
 
-/* Add a color to the active/current link */
+
 .topnav a.active {
     font-weight: bold;
     float: left;
     color: black;
 }
 
+/* Стили для страницы помощи */
 main .help {
     float: left;
     color: #fff
@@ -40,7 +41,7 @@ main .help h2 {max-width: 800px; margin: 60px 40px}
 main .help p {max-width: 1400px; margin: 40px 40px; font-size: 30px}
 
 
-
+/* Стили для класса features */
 main .features {
     float: center;
     color: #000;
@@ -50,8 +51,7 @@ main .features {
 
 }
 
-main .features img {max-height: 300px;}
-
+/* Стили для страницы добавления мемов */
 main .create form {
     margin-left: 35%;
     width: 500px;
@@ -62,6 +62,7 @@ main .create button {
     margin-top: 50px;
 }
 
+/* Стили для отдельной страницы мема */
 main .details_view {
 
     margin-left: auto;
