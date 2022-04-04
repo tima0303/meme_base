@@ -1,6 +1,6 @@
 /* Стили для верхней панели */
 .topnav {
-    background-color: #ffae00;
+    background-color: #ffc700;
     overflow: hidden;
 }
 
@@ -11,7 +11,7 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 22px;
 }
 
 
@@ -27,15 +27,18 @@
     font-weight: bold;
     float: left;
     color: black;
+    font-family: 'Arimo', serif;
 }
 
 /* Стили для страницы помощи */
 main .help {
-    float: left;
-    color: #fff
-    margin-top: 120px;
+    float: justify;
+    color: #000000;
+    margin-top: 100px;
     text-align: left;
     width: 100%;
+    border:1px solid black;
+    border-radius:20px;
 }
 main .help h2 {max-width: 800px; margin: 60px 40px}
 main .help p {max-width: 1400px; margin: 40px 40px; font-size: 30px}
@@ -44,10 +47,10 @@ main .help p {max-width: 1400px; margin: 40px 40px; font-size: 30px}
 /* Стили для класса features */
 main .features {
     float: center;
-    color: #000;
+    color: #000000;
     margin-top: 10px;
     text-align: center;
-    width: 20%;
+    width: 30%;
 
 }
 
@@ -55,7 +58,7 @@ main .features {
 main .create form {
     margin-left: 35%;
     width: 500px;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 main .create button {

@@ -2,7 +2,9 @@
 
 {% block title %}{{ title }}{% endblock %}
 
+
 {% block content %}
+<h1>Профиль</h1>
 <p>{{ user.username }}</p>
 <p><a href="{% url 'bookmarks' %}">Мои закладки</a></p>
 <p><a href="{% url 'manage' %}">Управление мемами</a></p>
