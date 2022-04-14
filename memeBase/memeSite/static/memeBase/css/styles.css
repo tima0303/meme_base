@@ -32,13 +32,11 @@
 
 /* Стили для страницы помощи */
 main .help {
-    float: justify;
+    float: center;
     color: #000000;
     margin-top: 100px;
-    text-align: left;
+    text-align: justify;
     width: 100%;
-    border:1px solid black;
-    border-radius:20px;
 }
 main .help h2 {max-width: 800px; margin: 60px 40px}
 main .help p {max-width: 1400px; margin: 40px 40px; font-size: 30px}
@@ -46,12 +44,22 @@ main .help p {max-width: 1400px; margin: 40px 40px; font-size: 30px}
 
 /* Стили для класса features */
 main .features {
+     float: left;
+    color: #000000;
+    margin: 20px;
+    text-align: center;
+    /*width: 30%;*/
+    border: 2px solid #ffc700;
+    border-radius:20px;
+}
+
+main .profile {
     float: center;
     color: #000000;
-    margin-top: 10px;
-    text-align: center;
-    width: 30%;
-
+    margin-top: 40px;
+    margin-left: 40px;
+    text-align: justify;
+    width: 100%;
 }
 
 /* Стили для страницы добавления мемов */
@@ -70,7 +78,7 @@ main .details_view {
 
     margin-left: auto;
     margin-right: auto;
-    width: 30em
+    width: 30em;
 }
 
 main .details_view img {max-height: 500px; max-width: 500px;}

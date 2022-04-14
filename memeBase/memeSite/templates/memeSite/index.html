@@ -6,11 +6,12 @@
 <div class="features">
     {% if meme %}
     {% for el in meme %}
-    <a href="{% url 'meme-detail' el.id %}"><img class="img-thumbnail" src="{{ el.photo.url }}"
-                                                 alt="Thumbnail image"></a>
+    <a href="{% url 'meme-detail' el.id %}"><img style="float: none; margin: 10px; width: 300px; height: 300px; object-fit: cover;" src="{{ el.photo.url }}"
+                                                    alt="Thumbnail image"></a>
     {% endfor %}
     {% else %}
     <p>Где мемы?!</p>
     {% endif %}
 </div>
 {% endblock %}
+<!-- class="img-thumbnail" -->
