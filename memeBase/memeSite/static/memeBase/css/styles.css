@@ -4,6 +4,14 @@
     overflow: hidden;
 }
 
+.topnav form {
+    float: center;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 22px;
+}
 
 .topnav a {
     float: right;
@@ -13,6 +21,7 @@
     text-decoration: none;
     font-size: 22px;
 }
+
 
 
 .topnav a:hover {
@@ -29,6 +38,8 @@
     color: black;
     font-family: 'Arimo', serif;
 }
+
+
 
 /* Стили для страницы помощи */
 main .help {

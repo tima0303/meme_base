@@ -2,7 +2,9 @@
 <!doctype html>
 <html lang="ru">
 <head>
-    <link rel="icon" href="https://w7.pngwing.com/pngs/885/567/png-transparent-rage-comic-internet-meme-trollface-cereal-meme-face-text-monochrome.png" type="image/png">
+    <link rel="icon"
+          href="https://w7.pngwing.com/pngs/885/567/png-transparent-rage-comic-internet-meme-trollface-cereal-meme-face-text-monochrome.png"
+          type="image/png">
     <link rel="icon" href="data:;base64,=">
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -23,6 +25,9 @@
     <a class="active" href="{% url 'home' %}">База Мемов</a>
     <a href="{% url 'guide' %}"><i class="fas fa-question"></i></a>
     <a href="{% url 'authorization' %}"><i class="fas fa-address-card"></i></a>
+        <form action="{% url 'search_results' %}" method="get">
+        <input name="q" type="text" placeholder="Ищем мемы...">
+    </form>
 </div>
 
 <main>
