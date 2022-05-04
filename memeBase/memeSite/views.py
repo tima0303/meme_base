@@ -11,6 +11,11 @@ class MemeHome(ListView):
     template_name = "memeSite/index.html"
     context_object_name = "meme"
 
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['tag'] = Meme.objects.order_by().values('tag').distinct()
+        return context
+
 
 class SearchResultView(ListView):
     model = Meme
@@ -20,6 +25,22 @@ class SearchResultView(ListView):
     def get_queryset(self):
         query = self.request.GET.get('q')
         object_list = Meme.objects.filter(title__icontains=query)
+        return object_list
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Ищем мемы'
+        return context
+
+
+class SearchTagResultView(ListView):
+    model = Meme
+    template_name = "memeSite/search_tag_results.html"
+    context_object_name = "meme"
+
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        object_list = Meme.objects.filter(tag__icontains=query)
         return object_list
 
     def get_context_data(self, *, object_list=None, **kwargs):

@@ -55,7 +55,7 @@ main .help p {max-width: 1400px; margin: 40px 40px; font-size: 30px}
 
 /* Стили для класса features */
 main .features {
-     float: left;
+    float: left;
     color: #000000;
     margin: 20px;
     text-align: center;
@@ -93,5 +93,14 @@ main .details_view {
 }
 
 main .details_view img {max-height: 500px; max-width: 500px;}
+
+main .tags {
+    float: right;
+    color: #000000;
+    text-align: center;
+    border: 2px solid #ffc700;
+    border-radius:20px;
+
+}
 
 
