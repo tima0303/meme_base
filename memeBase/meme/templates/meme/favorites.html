@@ -8,6 +8,6 @@
 <a href="{% url 'meme-detail' el.id %}"><img
         style="float: none; margin: 10px; width: 300px; height: 300px; object-fit: cover;" src="{{ el.photo.url }}"
         alt="Thumbnail image"></a>
-<div id="favorite-section"><a href="{% url 'favorite_add' el.id %}" class="btn btn-outline-primary">Remove</a></div>
+<div id="favorite-section"><a href="{% url 'favorite_add' el.id %}" class="btn btn-outline-primary">Удалить</a></div>
 {% endfor %}
 {% endblock %}

@@ -3,14 +3,17 @@
 {% block title %}{{ meme.title }}{% endblock %}
 {% block content %}
 <div class="details_view">
+    {% if not fav %}
     {% if request.user.is_authenticated %}
+
     <div>
-        <a href="{% url 'favorite_add' meme.id %}" class="btn btn-outline-primary">Add to Favorites</a>
+        <a href="{% url 'favorite_add' meme.id %}" class="btn btn-outline-primary">Добавить в избранное</a>
     </div>
     {% else %}
     <div>
-        <a href="{% url 'login' %}" class="btn btn-outline-primary">Add to Favorites</a>
+        <a href="{% url 'login' %}" class="btn btn-outline-primary">Добавить в избранное</a>
     </div>
+    {% endif %}
     {% endif %}
 
     <h1>{{ meme.title }}</h1>
