@@ -3,6 +3,16 @@
 {% block title %}{{ meme.title }}{% endblock %}
 {% block content %}
 <div class="details_view">
+    {% if request.user.is_authenticated %}
+    <div>
+        <a href="{% url 'favorite_add' meme.id %}" class="btn btn-outline-primary">Add to Favorites</a>
+    </div>
+    {% else %}
+    <div>
+        <a href="{% url 'login' %}" class="btn btn-outline-primary">Add to Favorites</a>
+    </div>
+    {% endif %}
+
     <h1>{{ meme.title }}</h1>
     <p>{{meme.content }}</p>
     <img src="{{ meme.photo.url }}">
