@@ -1,8 +1,25 @@
 {% extends 'memeSite/base.html' %}
 
-{% block title %}{{ title }}{% endblock %}
+{% block title %}Настройки профиля{% endblock %}
 
 {% block content %}
-<p>{{ user.username }}</p>
+
+<div class="create">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {{ user_form.username }}<br>
+
+        <span>{{ error }}</span>
+
+        <button class="btn btn-success" type="submit">Обновить имя</button>
+    </form>
+
+</div>
+
 <p><a href="{% url 'logout' %}">Выйти</a></p>
 {% endblock %}
+
+
+
+
