@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'memeSite.apps.MemesiteConfig',
     'accounts.apps.MemeusersConfig',
     'meme.apps.MemeConfig',
+    'taggit'
 ]
 
 MIDDLEWARE = [
@@ -105,3 +106,5 @@ MEDIA_URL = '/media/'
 
 LOGIN_REDIRECT_URL = 'personal'
 LOGOUT_REDIRECT_URL = 'home'
+
+TAGGIT_CASE_INSENSITIVE = True

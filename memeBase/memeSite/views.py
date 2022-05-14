@@ -2,7 +2,7 @@ from django.http import HttpResponseNotFound
 
 from django.shortcuts import render
 from django.views.generic import ListView
-
+from taggit.models import Tag
 from meme.models import Meme
 
 
@@ -13,7 +13,7 @@ class MemeHome(ListView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['tag'] = Meme.objects.order_by().values('tag').distinct()
+        context['tags'] = Tag.objects.all()
         return context
 
 
@@ -40,7 +40,8 @@ class SearchTagResultView(ListView):
 
     def get_queryset(self):
         query = self.request.GET.get('q')
-        object_list = Meme.objects.filter(tag__icontains=query)
+        object_list = Meme.objects.filter(tags__slug__in=[query])
+
         return object_list
 
     def get_context_data(self, *, object_list=None, **kwargs):
