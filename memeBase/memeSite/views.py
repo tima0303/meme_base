@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.http import HttpResponseNotFound
 
 from django.shortcuts import render
@@ -24,7 +25,7 @@ class SearchResultView(ListView):
 
     def get_queryset(self):
         query = self.request.GET.get('q')
-        object_list = Meme.objects.filter(title__icontains=query)
+        object_list = Meme.objects.filter(Q(title__icontains=query) | Q(content__icontains=query))
         return object_list
 
     def get_context_data(self, *, object_list=None, **kwargs):
