@@ -6,7 +6,7 @@ from django.forms import ModelForm, TextInput, Textarea
 class MemeForm(ModelForm):
     class Meta:
         model = Meme
-        fields = ['title', 'content', 'photo', 'tag']
+        fields = ['title', 'content', 'photo', 'tags']
 
         widgets = {
             "title": TextInput(attrs={
@@ -17,10 +17,11 @@ class MemeForm(ModelForm):
                 'class': 'form-control',
                 'placeholder': 'Описание мема'
             }),
-            "tag": TextInput(attrs={
+            "tags": TextInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'Название тега'
             }),
+
 
         }
 

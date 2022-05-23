@@ -15,15 +15,10 @@
 </div>
 
 <div class="tags">
-    {% if tag %}
-    {% for el in tag %}
 
-    <a href="{%url 'search_tag_results' %}?q={{el.tag}}">{{el.tag}}</a>
-
+    {% for tag in tags %}
+    <a href="{%url 'search_tag_results' %}?q={{ tag.slug }}">{{ tag.slug }}</a>
     {% endfor %}
-    {% else %}
-    <p>Где теги?!</p>
-    {% endif %}
+
 </div>
 {% endblock %}
-<!-- class="img-thumbnail" -->

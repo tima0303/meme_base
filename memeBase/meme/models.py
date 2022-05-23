@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from taggit.managers import TaggableManager
 
 
 class Meme(models.Model):
@@ -9,12 +10,13 @@ class Meme(models.Model):
 
     title = models.CharField(max_length=255)
     content = models.TextField(blank=True)
-    tag = models.CharField(max_length=30)
+
     photo = models.ImageField(upload_to="photos/%Y/%m/%d/")
     time_create = models.DateTimeField(auto_now_add=True)
     time_update = models.DateTimeField(auto_now=True)
     is_published = models.BooleanField(default=True)
     favorites = models.ManyToManyField(User, related_name='favourite', default=None, blank=True)
+    tags = TaggableManager()
 
     def __str__(self):
         return self.title
