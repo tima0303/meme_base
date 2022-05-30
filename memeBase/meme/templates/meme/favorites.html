@@ -3,11 +3,15 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-<h1>Закладки</h1>
-{% for el in new %}
-<a href="{% url 'meme-detail' el.id %}"><img
-        style="float: none; margin: 10px; width: 300px; height: 300px; object-fit: cover;" src="{{ el.photo.url }}"
+    <h1><div style="text-align: left; margin: 40px 10px 5px 40px;">Мои закладки</div></h1>
+<div class="favorite_meme">
+    {% if new %}
+    {% for el in new %}
+    <a href="{% url 'meme-detail' el.id %}"><img style="float: none; margin: 10px; width: 300px; height: 300px; object-fit: cover;" src="{{ el.photo.url }}"
         alt="Thumbnail image"></a>
-<div id="favorite-section"><a href="{% url 'favorite_add' el.id %}" class="btn btn-outline-primary">Удалить</a></div>
-{% endfor %}
+    {% endfor %}
+    {% else %}
+    <p>Упс! Закладок нет.</p>
+    {% endif %}
+</div>
 {% endblock %}

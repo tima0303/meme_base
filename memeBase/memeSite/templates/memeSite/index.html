@@ -15,22 +15,26 @@
 </div>
 
 <div class="tags">
-    <p>Теги</p>
+    <p><i class="fas fa-tags"></i>Теги</p>
     <style>
         .tags a {
             color: black; /* Цвет ссылок */
             text-decoration: none; /* Убираем подчёркивание */
             border: 1px solid #ffc700;
-            padding: 5px 10px;
+            padding: 5px 10px 5px 10px;
             border-radius:20px;
             line-height: 2.4;
-            background: #ffc700;
+            background: rgba(255, 199, 0, 0.6);
+        }
+        .tags i {
+            margin-right: 2px;
+            font-size: 16px;
         }
     </style>
     {% for tag in tags %}
-    #<a href="{%url 'search_tag_results' %}?q={{ tag.slug }}">{{ tag.slug }}</a>
+    <i class="fas fa-hashtag"></i>
+    <a href="{%url 'search_tag_results' %}?q={{ tag.slug }}">{{ tag.slug }}</a>
     <br>
     {% endfor %}
-
 </div>
 {% endblock %}

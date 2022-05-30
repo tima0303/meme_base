@@ -1,11 +1,21 @@
-D{% extends 'memeSite/base.html' %}
+{% extends 'memeSite/base.html' %}
 
 {% block title %}{{ meme.title }}{% endblock %}
+
 {% block content %}
+
+<div class="image_meme">
+    <img style="float: left; margin: 10px; width: 110%; height: 110%; object-fit: cover;" src="{{ meme.photo.url }}">
+</div>
+
 <div class="details_view">
+    <h1><div style="text-align: center;">{{ meme.title }}</div></h1>
+    <br>
+    <p>{{meme.content }}</p>
+    <p>Опубликовано: {{meme.time_create}}</p>
+    <p><a href="{{ meme.photo.url }}" class="btn btn-outline-primary" download><i class="fas fa-download"></i> Скачать мем</a>
     {% if not fav %}
     {% if request.user.is_authenticated %}
-
     <div>
         <a href="{% url 'favorite_add' meme.id %}" class="btn btn-outline-primary">Добавить в избранное</a>
     </div>
@@ -14,11 +24,10 @@ D{% extends 'memeSite/base.html' %}
         <a href="{% url 'login' %}" class="btn btn-outline-primary">Добавить в избранное</a>
     </div>
     {% endif %}
+    {% else %}
+     <div id="favorite-section">
+        <a href="{% url 'favorite_add' meme.id %}" class="btn btn-outline-primary" style="float: bottom;">Удалить</a>
+    </div>
     {% endif %}
-
-    <h1>{{ meme.title }}</h1>
-    <p>{{meme.content }}</p>
-    <img src="{{ meme.photo.url }}">
-    <p>{{meme.time_create }}</p>
 </div>
 {% endblock %}
