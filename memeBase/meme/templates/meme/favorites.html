@@ -3,7 +3,7 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-<h3>Закладки</h3>
+<h1>Закладки</h1>
 {% for el in new %}
 <a href="{% url 'meme-detail' el.id %}"><img
         style="float: none; margin: 10px; width: 300px; height: 300px; object-fit: cover;" src="{{ el.photo.url }}"
