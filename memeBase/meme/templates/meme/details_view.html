@@ -1,8 +1,18 @@
-D{% extends 'memeSite/base.html' %}
+{% extends 'memeSite/base.html' %}
 
 {% block title %}{{ meme.title }}{% endblock %}
 {% block content %}
 <div class="details_view">
+    <style>
+        .details_view a {
+                border: 1px solid #ffc700;
+                padding: 5px 10px 5px 10px;
+                border-radius:20px;
+                line-height: 2.4;
+                background: rgba(255, 199, 0, 0.6);
+                margin: 30px 90px 30px 30px;
+            }
+    </style>
     {% if not fav %}
     {% if request.user.is_authenticated %}
 
