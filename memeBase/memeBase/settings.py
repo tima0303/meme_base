@@ -30,7 +30,7 @@ INSTALLED_APPS = [
     'memeSite.apps.MemesiteConfig',
     'accounts.apps.MemeusersConfig',
     'meme.apps.MemeConfig',
-    'taggit'
+    'taggit',
 ]
 
 MIDDLEWARE = [

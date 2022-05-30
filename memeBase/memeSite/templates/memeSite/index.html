@@ -6,7 +6,7 @@
 <div class="features">
     {% if meme %}
     {% for el in meme %}
-    <a href="{% url 'meme-detail' el.id %}"><img style="float: none; margin: 10px; width: 300px; height: 300px; object-fit: cover;" src="{{ el.photo.url }}"
+    <a href="{% url 'meme-detail' el.id %}"><img style="float: none; margin: 10px; width: 250px; height: 250px; object-fit: cover;" src="{{ el.photo.url }}"
                                                     alt="Thumbnail image"></a>
     {% endfor %}
     {% else %}
@@ -15,9 +15,21 @@
 </div>
 
 <div class="tags">
-
+    <p>Теги</p>
+    <style>
+        .tags a {
+            color: black; /* Цвет ссылок */
+            text-decoration: none; /* Убираем подчёркивание */
+            border: 1px solid #ffc700;
+            padding: 5px 10px;
+            border-radius:20px;
+            line-height: 2.4;
+            background: #ffc700;
+        }
+    </style>
     {% for tag in tags %}
-    <a href="{%url 'search_tag_results' %}?q={{ tag.slug }}">{{ tag.slug }}</a>
+    #<a href="{%url 'search_tag_results' %}?q={{ tag.slug }}">{{ tag.slug }}</a>
+    <br>
     {% endfor %}
 
 </div>

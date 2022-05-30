@@ -25,7 +25,7 @@
 
 
 .topnav a:hover {
-    background-color: #ddd;
+    background-color: #ffc700;
     color: black;
     transform: scale(1.1);
     transition: transform .3s ease;
@@ -40,12 +40,12 @@
 }
 
 
-
 /* Стили для страницы помощи */
 main .help {
     float: center;
     color: #000000;
     margin-top: 100px;
+    margin-right:auto;
     text-align: justify;
     width: 100%;
 }
@@ -56,12 +56,13 @@ main .help p {max-width: 1400px; margin: 40px 40px; font-size: 30px}
 /* Стили для класса features */
 main .features {
     float: left;
+    width: 1400px;
     color: #000000;
-    margin: 20px;
+    margin: 30px;
     text-align: center;
-    /*width: 30%;*/
     border: 2px solid #ffc700;
     border-radius:20px;
+    padding: 10px;
 }
 
 main .profile {
@@ -86,7 +87,6 @@ main .create button {
 
 /* Стили для отдельной страницы мема */
 main .details_view {
-
     margin-left: auto;
     margin-right: auto;
     width: 30em;
@@ -96,11 +96,13 @@ main .details_view img {max-height: 500px; max-width: 500px;}
 
 main .tags {
     float: right;
+    font-size: 20px;
     color: #000000;
+    width: 300px;
+    margin: 30px 90px 30px 30px;
     text-align: center;
     border: 2px solid #ffc700;
     border-radius:20px;
-
+    padding: 10px;
 }
-
 
