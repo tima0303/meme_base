@@ -3,11 +3,18 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
+
     <h1><div style="text-align: left; margin: 40px 10px 5px 40px;">Мои закладки</div></h1>
 <div class="favorite_meme">
     {% if new %}
     {% for el in new %}
-    <a href="{% url 'meme-detail' el.id %}"><img style="float: none; margin: 10px; width: 300px; height: 300px; object-fit: cover;" src="{{ el.photo.url }}"
+    <a href="{% url 'meme-detail' el.id %}"><img style="float: none; margin: 10px; width: 300px; height: 300px; object-fit: cover;" src="{{ el.photo.url }}"></a>
+
+<h3>Закладки</h3>
+{% for el in new %}
+<a href="{% url 'meme-detail' el.id %}"><img
+        style="float: none; margin: 10px; width: 300px; height: 300px; object-fit: cover;" src="{{ el.photo.url }}"
+
         alt="Thumbnail image"></a>
     {% endfor %}
     {% else %}

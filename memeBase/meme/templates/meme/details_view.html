@@ -9,11 +9,24 @@
 </div>
 
 <div class="details_view">
+
     <h1><div style="text-align: center;">{{ meme.title }}</div></h1>
     <br>
     <p>{{meme.content }}</p>
     <p>Опубликовано: {{meme.time_create}}</p>
     <p><a href="{{ meme.photo.url }}" class="btn btn-outline-primary" download><i class="fas fa-download"></i> Скачать мем</a>
+
+    <style>
+        .details_view a {
+                border: 1px solid #ffc700;
+                padding: 5px 10px 5px 10px;
+                border-radius:20px;
+                line-height: 2.4;
+                background: rgba(255, 199, 0, 0.6);
+                margin: 30px 90px 30px 30px;
+            }
+    </style>
+
     {% if not fav %}
     {% if request.user.is_authenticated %}
     <div>

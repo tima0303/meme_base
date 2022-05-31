@@ -114,6 +114,7 @@ main .tags {
 }
 
 
+
 main .favorite_meme {
     float: center;
     width: 90%;
@@ -123,3 +124,4 @@ main .favorite_meme {
     justify-content: center;
     text-align: justify;
 }
+
