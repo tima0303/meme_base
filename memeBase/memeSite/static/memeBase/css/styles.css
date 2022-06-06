@@ -116,12 +116,12 @@ main .tags {
 
 
 main .favorite_meme {
-    float: center;
-    width: 90%;
+    float: left;
+    width: 70%;
     color: #000000;
     margin: 60px;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     text-align: justify;
 }
 
