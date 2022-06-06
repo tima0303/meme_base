@@ -1,16 +1,8 @@
 {% extends 'memeSite/base.html' %}
 
 {% block title %}{{ meme.title }}{% endblock %}
+
 {% block content %}
-
-<h2>Регистрация</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Зарегистрироваться</button>
-</form>
-
-
 <head>
   <!-- Design by foolishdeveloper.com -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -81,7 +73,6 @@
       color: #000000;
       letter-spacing: 0.5px;
       outline: none;
-      border: none;
     }
 
     form h3 {
@@ -89,10 +80,6 @@
       font-weight: 500;
       line-height: 42px;
       text-align: center;
-    }
-
-    ::placeholder {
-      color: #e5e5e5;
     }
 
     button {
