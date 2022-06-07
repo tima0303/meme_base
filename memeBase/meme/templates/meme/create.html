@@ -4,19 +4,22 @@
 
 {% block content %}
 <div class="create">
+    <style>
+        .create h1 {
+            text-align: left;
+            margin: 2% 2% 2% 5%;
+        }
+    </style>
+    <h1>Добавление мема</h1>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-
         {{ form.title }}<br>
         {{ form.content }}<br>
         {{ form.tags }}<br>
         {{ form.photo }}<br>
-
+        <button type="submit">Добавить мем</button>
         <span>{{ error }}</span>
-
-        <button class="btn btn-success" type="submit">Добавить мем</button>
     </form>
-
 </div>
 
 {% endblock %}

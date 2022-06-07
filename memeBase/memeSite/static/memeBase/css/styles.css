@@ -76,13 +76,49 @@ main .profile {
 
 /* Стили для страницы добавления мемов */
 main .create form {
-    margin-left: 350px;
-    width: 500px;
-    margin-top: 100px;
+    margin-left: 5%;
+    width: 40%;
+    margin-top: 1%;
+    text-align: left;
+}
+
+main .create form input[type = file]{
+    border: 2px solid #ffc700;
+    padding: 5px 10px 5px 10px;
+    border-radius:10px;
+    line-height: 2.4;
+    text-align: center;
+    font-size : 100%;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 125%;
+}
+
+main .create form input[type=text] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ffc700;
+    padding: 5px 10px 5px 10px;
+    border-radius:10px;
+}
+
+main .create form textarea{
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ffc700;
+    padding: 5px 10px 5px 10px;
+    border-radius:10px;
 }
 
 main .create button {
-    margin-top: 50px;
+    border: 1px solid #ffc700;
+    padding: 5px 10px 5px 10px;
+    border-radius:20px;
+    line-height: 2.4;
+    background: rgba(255, 199, 0, 0.6);
+    text-align: center;
+    width: 100%;
+    margin-top: 2%;
 }
 
 /* Стили для отдельной страницы мема */
@@ -112,8 +148,6 @@ main .tags {
     border-radius:20px;
     padding: 10px;
 }
-
-
 
 main .favorite_meme {
     float: left;

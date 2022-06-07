@@ -3,11 +3,24 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-<div class="features">
+<div class="add_meme">
+    <style>
+        .add_meme h1 {
+            margin: 3%;
+            }
+        .add_meme button{
+            border: 1px solid #ffc700;
+            padding: 5px 10px 5px 10px;
+            border-radius:20px;
+            line-height: 2.4;
+            background: rgba(255, 199, 0, 0.6);
+            text-align: center;
+        }
+    </style>
     <h1>Управление мемами</h1>
     <a href="{% url 'create' %}">
         <li>
-            <button class="btn btn-info"><i class="fas fa-plus-circle"></i>Добавить мем</button>
+            <button><i class="fas fa-plus-circle"></i>   Добавить мем</button>
         </li>
     </a>
 </div>
