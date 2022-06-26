@@ -14,11 +14,11 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-qk150hwag^5zguhpasay^5^ki6q9w0(g%vi3#c86(h^5y%ai9z'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-qk150hwag^5zguhpasay^5^ki6q9w0(g%vi3#c86(h^5y%ai9z')
 
-DEBUG = True
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -94,6 +94,8 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = '/var/www/rycc/static'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
